@@ -1,0 +1,45 @@
+Occupation,Category,Men Employed,Women Employed,Percentage of women in occupational group,Men Median Earnings,Women Median Earnings,Women's earnings as a percentage of men's earnings
+Other physicians,STEM-related Occupations,524089,347477,39.9,250000,185183,74.1
+Dental hygienists,STEM-related Occupations,10070,192311,95.0,73379,60287,82.2
+Speech-language pathologists,STEM-related Occupations,7715,170281,95.7,71411,66741,93.5
+Medical records specialists,STEM-related Occupations,16812,172461,91.1,42418,42756,100.8
+Veterinary technologists and technicians,STEM-related Occupations,18083,129474,87.7,32454,31523,97.1
+Clinical laboratory technicians,STEM-related Occupations,89377,242911,73.1,48452,46840,96.7
+Therapists all other,STEM-related Occupations,36646,150647,80.4,53832,51628,95.9
+Dietitians and nutritionists,STEM-related Occupations,9384,94875,91.0,56615,53875,95.2
+Pharmacists,STEM-related Occupations,139371,196724,58.5,128130,121218,94.6
+Registered nurses,STEM-related Occupations,397184,2964396,88.2,73603,68509,93.1
+Nurse practitioners,STEM-related Occupations,22431,190725,89.5,113546,103312,91.0
+Occupational therapists,STEM-related Occupations,12797,123117,90.6,79798,72121,90.4
+Physical therapists,STEM-related Occupations,89560,181168,66.9,85977,77337,90.0
+Pharmacy technicians,STEM-related Occupations,87577,290430,76.8,36409,32655,89.7
+Licensed vocational nurses,STEM-related Occupations,81438,626526,88.5,47859,41851,87.4
+Radiologic technicians,STEM-related Occupations,66377,146753,68.9,62255,54238,87.1
+Physician assistants,STEM-related Occupations,44826,96782,68.3,121816,105676,86.8
+Surgical technologists,STEM-related Occupations,28632,81295,74.0,50890,42475,83.5
+Miscellaneous health technologists and technicians,STEM-related Occupations,52785,95549,64.4,50444,41498,82.3
+Health services managers,STEM-related Occupations,188027,492245,72.4,88871,71282,80.2
+Biological scientists,STEM Occupations,46388,47335,50.5,67687,68603,101.4
+Computer systems administrators,STEM Occupations,181556,42231,18.9,76323,73211,95.9
+Other mathematical science occupations,STEM Occupations,74239,61734,45.4,78141,74189,94.9
+Industrial engineers,STEM Occupations,205133,51393,20.0,86334,80836,93.6
+Computer programmers,STEM Occupations,265291,71725,21.3,90404,82351,91.1
+Engineers all other,STEM Occupations,508067,85473,14.4,101281,91932,90.8
+Computer support specialists,STEM Occupations,503120,177467,26.1,60877,55112,90.5
+Medical scientists,STEM Occupations,59716,77367,56.4,81831,73907,90.3
+Other life physical and social science technicians,STEM Occupations,107705,114142,51.5,49080,43812,89.3
+Software developers,STEM Occupations,1332895,307695,18.8,114190,101266,88.7
+Computer occupations all other,STEM Occupations,510236,189422,27.1,70029,61048,87.2
+Civil engineers,STEM Occupations,358160,67416,15.8,91923,79966,87.0
+Computer systems managers,STEM Occupations,464427,196039,29.7,118104,101763,86.2
+Computer systems analysts,STEM Occupations,362999,249084,40.7,89427,75628,84.6
+Physical scientists all other,STEM Occupations,179021,141977,44.2,92369,76748,83.1
+Operations research analysts,STEM Occupations,82327,79709,49.2,91362,75537,82.7
+Other psychologists,STEM Occupations,46009,115658,71.5,98820,80629,81.6
+Other engineering technologists and technicians except drafters,STEM Occupations,303599,83474,21.6,60034,48180,80.3
+Chemists and materials scientists,STEM Occupations,62385,48736,43.9,85197,66645,78.2
+Database administrators and architects,STEM Occupations,84939,43856,34.1,96930,70256,72.5
+Total STEM2 Occupations:,General,7890084,2879806,26.7,91360,76820,84.1
+Total Employed,General,83061060,75697734,47.7,53544,43394,81.0
+Total non-STEM Occupations,General,72368965,64944346,47.3,50440,40560,80.4
+Total STEM-related Occupations:,General,2802011,7873582,73.8,85860,62940,73.3
