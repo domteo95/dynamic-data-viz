@@ -377,6 +377,16 @@ function scatter(data, filter){
     .style('font-size', '12px')
     .text('Men Median Earnings ($)');
 
+  if (filter != 'General'){
+    svg
+    .append('text')
+    .attr("transform", `translate(${plotWidth-250}, 0)`)
+    .style("text-anchor", "middle")
+    .style('font-size', '12px')
+    .text('*Hover over Points for more Information!');
+  }
+  
+
     //Add annotations
 
   const line_label = [
