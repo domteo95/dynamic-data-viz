@@ -470,6 +470,7 @@ function scatter(data, filter){
       .annotations(annotations)
     svg
       .append("g")
+      .attr('id', 'annotations-general')
       .call(makeAnnotations)
 
 
@@ -562,14 +563,14 @@ function scatter(data, filter){
           
         svg
           .append("g")
-          .attr('id', 'annotations2')
+          .attr('id', 'annotations')
           .call(makeAnnotations)
       
     })
     .on('mouseleave', (e,d) => {
       select(e.currentTarget)
         .style("fill", "#182A34")
-      select('g #annotations2').remove()
+      select('g #annotations').remove()
     });
   } else if (filter == 'STEM-related Occupations'){
     dots.on('mouseenter', (e,d) => {
@@ -640,14 +641,14 @@ function scatter(data, filter){
         .annotations(annotate)
       svg
         .append("g")
-        .attr('id', 'annotations2')
+        .attr('id', 'annotations')
         .call(makeAnnotations)
       
     })
     .on('mouseleave', (e,d) => {
       select(e.currentTarget)
         .style("fill", "#182A34")
-      select('g #annotations2').remove()
+      select('g #annotations').remove()
     });
   }
      

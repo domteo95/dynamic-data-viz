@@ -13,9 +13,14 @@ a {
 
 #title2{
   font-family: 'Playfair Display', serif;
-  margin:50px
+  margin:50px;
+  text-align: center;
 }
 
+#annotations .annotation-note-bg{
+  fill: #751F36;
+  fill-opacity: 0.3;
+}
 
 html,
 body {
@@ -270,3 +275,6 @@ circle.selected-dots2:hover {
   fill: red;
 }
 
+h2#scroll{
+  text-align: center;
+}
