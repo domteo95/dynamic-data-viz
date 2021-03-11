@@ -135,7 +135,7 @@ csv('./data/pay.csv')
       colorCountry.unshift('US')
       const myColor = scaleOrdinal()
         .domain(colorCountry)
-        .range(['#2E5668', '#751F36', '#C79C5F'].concat(schemeTableau10.slice(1,11)));
+        .range(['#7DB3CD', '#751F36', '#C79C5F'].concat(schemeTableau10.slice(1,11)));
   
       var sumstat = nest() // nest function allows to group the calculation per level of a factor
         .key(function(d) { return d.Country;})
@@ -188,7 +188,7 @@ csv('./data/pay.csv')
         })
         .attr("d", d=> lineScale(d.values))
         .attr('stroke', function(d){
-          return colorCountry.includes(d.key)? myColor(d.key) : 'grey' 
+          return colorCountry.includes(d.key)? myColor(d.key) : '#8c918d' 
         })
         .attr('stroke-width', 3)
         .attr("fill", 'none')
@@ -210,7 +210,7 @@ csv('./data/pay.csv')
         .attr('text-anchor', 'middle')
         .style('font-size', '10px')
         .style('fill', function(d){
-          return colorCountry.includes(d.Country)? myColor(d.Country) : 'grey' 
+          return colorCountry.includes(d.Country)? myColor(d.Country) : 'black' 
         })
         .text(d => d['Country'])
         .attr('transform', `translate(-40, ${margin.top})`);
@@ -231,7 +231,7 @@ csv('./data/pay.csv')
         .attr('text-anchor', 'middle')
         .style('font-size', '10px')
         .style('fill', function(d){
-          return colorCountry.includes(d.Country)? myColor(d.Country) : 'grey' 
+          return colorCountry.includes(d.Country)? myColor(d.Country) : 'black' 
         })
         .text(d => d['Country'])
         .attr('transform', `translate(45, ${margin.top})`)
@@ -261,7 +261,7 @@ csv('./data/pay.csv')
             .style('display', 'block')
             .style('left', `${e.layerX+300}px`)
             .style('top', `${e.layerY+300}px`)
-            .html(`Country: ${d.Country} (${d.Year}) <br> Women's Wages as % of Men: ${value}% <br> Ranking: ${Math.round(d['rank year'])}` )
+            .html(`Country: ${d.Country} (${d.Year}) <br> Difference in Wages by Gender: ${value}% <br> Ranking: ${Math.round(d['rank year'])}` )
           
         })
         .on('mouseleave', (e,d) => {

@@ -17,6 +17,10 @@ a {
   text-align: center;
 }
 
+#not-selected-line{
+  opacity:0.6
+}
+
 #annotations .annotation-note-bg{
   fill: #751F36;
   fill-opacity: 0.3;
