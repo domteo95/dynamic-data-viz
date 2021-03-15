@@ -100,8 +100,6 @@ csv('./data/pay.csv')
 
         }
       });
-      
-
     
     renderVisualOne(data, start, end, select_countries);
 
@@ -129,7 +127,6 @@ csv('./data/pay.csv')
       } else{
         subtitle.innerHTML = `Comparing the US with ${select_countries.join(', ')}`
       }
-     
 
       let colorCountry = select_countries.slice()
       colorCountry.unshift('US')
@@ -171,6 +168,14 @@ csv('./data/pay.csv')
           .style("text-anchor", "middle")
           .style('font-size', '12px')
           .text('Country Rank (Highest to Lowest)');
+
+        svg
+          .append('text')
+          .attr('class', 'y-axis-label')
+          .attr("transform", `translate(${plotWidth}, ${plotHeight+80})`)
+          .style("text-anchor", "middle")
+          .style('font-size', '11px')
+          .text('Source: OECD Stats');
   
       svg.selectAll('.line')  
         .data(sumstat)
@@ -259,8 +264,8 @@ csv('./data/pay.csv')
           const value = Math.round(d.Value*100)/100
           tooltip
             .style('display', 'block')
-            .style('left', `${e.layerX+300}px`)
-            .style('top', `${e.layerY+300}px`)
+            .style('left', `${e.layerX}px`)
+            .style('top', `${e.layerY}px`)
             .html(`Country: ${d.Country} (${d.Year}) <br> Difference in Wages by Gender: ${value}% <br> Ranking: ${Math.round(d['rank year'])}` )
           
         })
@@ -283,13 +288,11 @@ csv('./data/pay.csv')
 
 function scatter(data, filter){
   
-
   const height = 800;
   const width = 950 ;
   const margin = { left: 55, top: 50, bottom: 50, right: 50 };
   const plotWidth = width - margin.left - margin.right;
   const plotHeight  = height - margin.top - margin.bottom;
-
 
   var filtered = data.filter(row => row['Category'] == filter)
   var filtered = filtered.sort(function(a, b){return b['Women Employed'] - a['Women Employed']})
@@ -376,6 +379,14 @@ function scatter(data, filter){
     .style("text-anchor", "middle")
     .style('font-size', '12px')
     .text('Men Median Earnings ($)');
+
+  svg
+    .append('text')
+    .attr('class', 'y-axis-label')
+    .attr("transform", `translate(${plotWidth-15}, ${plotHeight+35})`)
+    .style("text-anchor", "middle")
+    .style('font-size', '11px')
+    .text('Source: US Census Bureau');
 
   if (filter != 'General'){
     svg
@@ -482,8 +493,6 @@ function scatter(data, filter){
       .append("g")
       .attr('id', 'annotations-general')
       .call(makeAnnotations)
-
-
   } 
   
   var dots = svg.selectAll('dots')
@@ -743,7 +752,7 @@ csv('./data/wage-gap.csv')
     // generic window resize listener event
     function handleResize() {
       // 1. update height of step elements
-      var stepH = Math.floor(window.innerHeight * 0.85);
+      var stepH = Math.floor(window.innerHeight * 0.90);
       step.style("height", stepH + "px");
 
       var figureHeight = window.innerHeight - 70;
