@@ -16,8 +16,10 @@ a {
 }
 
 #annotations .annotation-note-bg {
-  fill: #751f36;
-  fill-opacity: 0.3;
+  fill: beige;
+  fill-opacity: 0.9;
+  padding: 3px;
+  color: white;
 }
 
 html,
@@ -29,8 +31,7 @@ body {
 }
 
 #visual1-container {
-  width: 1350px;
-  margin-left: 12%;
+  width: 100%;
 }
 
 #selected {
@@ -73,7 +74,7 @@ body {
 
 #grid-container {
   display: grid;
-  grid-template-columns: 320px 450px 450px;
+  grid-template-columns: 20% 40% 40%;
   grid-gap: 10px;
   padding: 10px;
 }
@@ -111,7 +112,7 @@ li {
 }
 
 #slider-range {
-  margin-left: 120px;
+  margin-left: 100px;
   width: 780px;
 }
 
@@ -145,7 +146,7 @@ li {
   display: flex;
   /* background-color: #f3f3f3; */
   padding: 1rem;
-  margin-left: 12%;
+  margin-left: 1%;
 }
 
 #scrolly > * {
@@ -276,4 +277,22 @@ p#introduction {
   font-size: 16px;
   text-align: center;
   font-family: "Open Sans", sans-serif;
+}
+
+div#sources {
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+div#sources h2 {
+  margin-left: 2%;
+  text-decoration: underline;
+}
+
+li#sources-list {
+  display: inline;
+  text-align: left;
+  list-style-type: square;
+  padding: 6px;
+  margin-bottom: 15px;
+  font-size: 15px;
 }

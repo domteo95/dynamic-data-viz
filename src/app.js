@@ -20,7 +20,7 @@ import {annotation, annotationCalloutCircle} from 'd3-svg-annotation'
 
 const height = 650;
 const width = 950;
-const margin = { left: 200, top: 50, bottom: 50, right: 50 };
+const margin = { left: 100, top: 50, bottom: 50, right: 50 };
 const plotWidth = width - margin.left - margin.right;
 const plotHeight = height - margin.top - margin.bottom;
 let start = 2002
@@ -164,10 +164,10 @@ csv('./data/pay.csv')
       svg
           .append('text')
           .attr('class', 'y-axis-label')
-          .attr("transform", `translate(0, 15)`)
+          .attr("transform", `translate(30, 15)`)
           .style("text-anchor", "middle")
           .style('font-size', '12px')
-          .text('Country Rank (Highest to Lowest)');
+          .text('Country Rank (Smallest to Largest Wage Gap)');
 
         svg
           .append('text')
@@ -253,7 +253,7 @@ csv('./data/pay.csv')
         .attr('class', 'selected-dots')
         .attr('cx', d=>xScale(new Date(d.Year)))
         .attr('cy', d=>yScale(parseInt(d['rank year'])))
-        .attr('r', 5)
+        .attr('r', 8)
         .style('fill', function(d){
           return  myColor(d.Country)
         })
@@ -264,8 +264,8 @@ csv('./data/pay.csv')
           const value = Math.round(d.Value*100)/100
           tooltip
             .style('display', 'block')
-            .style('left', `${e.layerX}px`)
-            .style('top', `${e.layerY}px`)
+            .style('left', `${e.pageX}px`)
+            .style('top', `${e.pageY}px`)
             .html(`Country: ${d.Country} (${d.Year}) <br> Difference in Wages by Gender: ${value}% <br> Ranking: ${Math.round(d['rank year'])}` )
           
         })
@@ -288,8 +288,8 @@ csv('./data/pay.csv')
 
 function scatter(data, filter){
   
-  const height = 800;
-  const width = 950 ;
+  const height = 670;
+  const width = 800 ;
   const margin = { left: 55, top: 50, bottom: 50, right: 50 };
   const plotWidth = width - margin.left - margin.right;
   const plotHeight  = height - margin.top - margin.bottom;
@@ -431,8 +431,8 @@ function scatter(data, filter){
           radiusPadding: 5   // white space around circle befor connector
         },
         color: ["#751F36"],
-        x: xScale(96000),
-        y: 180,
+        x: xScale(100000),
+        y: yScale(77000),
         dy: 50,
         dx: -70
       },
@@ -447,8 +447,8 @@ function scatter(data, filter){
           radiusPadding: 5   // white space around circle befor connector
         },
         color: ["#751F36"],
-        x: xScale(91000),
-        y: 280,
+        x: xScale(94000),
+        y: yScale(62000),
         dy: 110,
         dx: 30
       },
@@ -463,8 +463,8 @@ function scatter(data, filter){
           radiusPadding: 5   // white space around circle befor connector
         },
         color: ["#751F36"],
-        x: xScale(58000),
-        y: 390,
+        x: xScale(62000),
+        y: yScale(43000),
         dy: 50,
         dx: 80
       },
@@ -480,8 +480,8 @@ function scatter(data, filter){
           radiusPadding: 5   // white space around circle befor connector
         },
         color: ["#751F36"],
-        x: xScale(55000),
-        y: 420,
+        x: xScale(57000),
+        y: yScale(38000),
         dy: 70,
         dx: -30
       }
@@ -529,7 +529,7 @@ function scatter(data, filter){
               radiusPadding: 5   // white space around circle befor connector
             },
             color: ["#751F36"],
-            x: xScale(parseInt(d['Men Median Earnings']) + 8000),
+            x: xScale(parseInt(d['Men Median Earnings']) + 10000),
             y: yScale(d['Women Median Earnings']),
             dy: 40,
             dx: 10
@@ -548,7 +548,7 @@ function scatter(data, filter){
               radiusPadding: 5   // white space around circle befor connector
             },
             color: ["#751F36"],
-            x: xScale(parseInt(d['Men Median Earnings']) + 8000),
+            x: xScale(parseInt(d['Men Median Earnings']) + 10000),
             y: yScale(d['Women Median Earnings']),
             dy: -30,
             dx: -10
@@ -569,7 +569,7 @@ function scatter(data, filter){
               radiusPadding: 5   // white space around circle befor connector
             },
             color: ["#751F36"],
-            x: xScale(parseInt(d['Men Median Earnings']) + 8000),
+            x: xScale(parseInt(d['Men Median Earnings']) + 10000),
             y: yScale(d['Women Median Earnings']),
             dy: 80,
             dx: -10
@@ -611,7 +611,7 @@ function scatter(data, filter){
               radiusPadding: 5   // white space around circle befor connector
             },
             color: ["#751F36"],
-            x: xScale(parseInt(d['Men Median Earnings']) + 14500),
+            x: xScale(parseInt(d['Men Median Earnings']) + 20000),
             y: yScale(d['Women Median Earnings']),
             dy: 40,
             dx: -20
@@ -630,7 +630,7 @@ function scatter(data, filter){
               radiusPadding: 5   // white space around circle befor connector
             },
             color: ["#751F36"],
-            x: xScale(parseInt(d['Men Median Earnings']) + 15000),
+            x: xScale(parseInt(d['Men Median Earnings']) + 20000),
             y: yScale(d['Women Median Earnings']),
             dy: -5,
             dx: 220
@@ -649,7 +649,7 @@ function scatter(data, filter){
               radiusPadding: 5   // white space around circle befor connector
             },
             color: ["#751F36"],
-            x: xScale(parseInt(d['Men Median Earnings']) + 16000),
+            x: xScale(parseInt(d['Men Median Earnings']) + 20000),
             y: yScale(d['Women Median Earnings']),
             dy: -20,
             dx: -20
@@ -680,7 +680,7 @@ function scatter(data, filter){
     .append('g')
     .attr('class', 'legend-title')
     .append('text')
-    .attr('x', 180)
+    .attr('x', 100)
     .attr('y', 10)
     .style('font-weight', 'bold')
     .text('Women Employed');
@@ -692,7 +692,7 @@ function scatter(data, filter){
     .data(size)
     .enter()
     .append('circle')
-    .attr('cx', 190)
+    .attr('cx', 110)
     .attr('cy', function (d, i) {
       if (i==0){
         return ((i+0.5) *35)+20;
@@ -721,7 +721,7 @@ function scatter(data, filter){
     .enter()
     .append('text')
     .attr('class', 'legend-text')
-    .attr('x', 240)
+    .attr('x', 160)
     .attr('y', function (d, i) {
       if (i==0){
         return ((i+0.5) *35)+25;
