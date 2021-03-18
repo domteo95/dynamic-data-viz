@@ -1,58 +1,8 @@
-# Dynamic Project Scaffold
+#Final Project - Gender Wage Gap
 
-In this folder I've provided an example project that enables you to use modern javascript tooling with as little effort as possible. This scaffold includes
+Visualization can be accessed at https://domteo95.github.io/gender-wage-gap/
 
-- a dev server that combines javascript modules and presents them to the browser. This comes with autoreload for free! It's great.
-- linters and autoformaters so you'll be able to check if your writing well styled javascript code. I have some pretty strong linting in here. You can disable them if you want, but you'll be judged.
+##Summary
+It is common practice to view gender inequality as a single problem rather than a large problem consisting of many smaller components. Gender inequality can be largely divided into the political realm (equal female political representation at the different political bodies) & the economic realm which can be divided into (representation in different industries and at different levels of seniority & the gender pay gap). This data story will be largely focused on the gender wage gap, an area that America does quite poorly (as we'll see), despite their above average performance in other indicators. I've also chosen to focus on the economic realm because I believe that in the short term more can be done to achieve economic gender equality.
 
-
-
-## Setup
-
-Make sure you have npm/node/yarn installed.
-
-```sh
-npm install
-# then
-npm run start
-
-# or if yarn-ing
-yarn
-# then
-yarn start
-```
-
-
-You will need to be explicit about your imports, eg
-```js
-import {functionFromModule} from 'target-module';
-```
-
-In this scaffold I have not installed any d3 packages. Some helpful ones (read the ones I usually end up using) are d3-selection, d3-scale, and d3-shape. To add one of these packages just do
-
-```sh
-npm install --save PACKAGENAME
-
-# or if yarning
-yarn add PACKAGENAME
-```
-
-
-## Usage
-
-Development:
-
-Step 1: Do all of your work in src. There is no step 2.
-
-Production:
-
-There are currently two easy ways to deploy this scaffold onto the internet.  
-
-### Netlify
-
-Netlify is an excellent company that tries to make the dev process as easy as possible. The way you deploy this scaffold there is get an account, start a new project, point it to the relevant github folder (that contains just this scaffold!), set the build command to be 'yarn build' and that's it.
-
-
-### GH Pages
-
-gh-pages is a wonderful resource for doing web-development, and allows you to have classy YOU_PERSONAL_DOMAIN/projectname type links. You can deploy this scaffold there by running 'yarn build' in your command line, commiting the modified file, and push to github. If you've configured your projects settings correct it should all just work out.
+This data story will be divided into 2 interactive visualization sections. The first section will focus on comparing the US's performance in achieving gender wage gaps with several other high income OECD countries. Readers are able to choose any yearly range from 2002 to 2017 as well as select any of the countries that they want to explicitly make comparisons with the US. Users are then able to hover around the points for selected countries to get more details. Selected countries will also be color-coded differently for easy differentiation. While the ranks may not change too greatly across the years, users can hover around the points to find the percentage difference in wages. The second section explores how the gender wage gap in the US differs across industries and within the STEM and STEM related industries. These are important industries to focus on since they're among the highest paying jobs in the US and suffer from 2 problems - unequal female representation in these high paying jobs and a gender wage gap that persists even among the women employed.
