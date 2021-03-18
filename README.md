@@ -1,8 +1,8 @@
-#Final Project - Gender Wage Gap
+# Final Project - Gender Wage Gap
 
 Visualization can be accessed at https://domteo95.github.io/gender-wage-gap/
 
-##Summary
+## Summary
 It is common practice to view gender inequality as a single problem rather than a large problem consisting of many smaller components. Gender inequality can be largely divided into the political realm (equal female political representation at the different political bodies) & the economic realm which can be divided into (representation in different industries and at different levels of seniority & the gender pay gap). This data story will be largely focused on the gender wage gap, an area that America does quite poorly (as we'll see), despite their above average performance in other indicators. I've also chosen to focus on the economic realm because I believe that in the short term more can be done to achieve economic gender equality.
 
 This data story will be divided into 2 interactive visualization sections. The first section will focus on comparing the US's performance in achieving gender wage gaps with several other high income OECD countries. Readers are able to choose any yearly range from 2002 to 2017 as well as select any of the countries that they want to explicitly make comparisons with the US. Users are then able to hover around the points for selected countries to get more details. Selected countries will also be color-coded differently for easy differentiation. While the ranks may not change too greatly across the years, users can hover around the points to find the percentage difference in wages. The second section explores how the gender wage gap in the US differs across industries and within the STEM and STEM related industries. These are important industries to focus on since they're among the highest paying jobs in the US and suffer from 2 problems - unequal female representation in these high paying jobs and a gender wage gap that persists even among the women employed.
