@@ -91,6 +91,10 @@ li {
   font-size: 13px;
 }
 
+.col-sm-2 {
+  width: 350px;
+}
+
 .col-sm {
   grid-column-start: 2;
   grid-column-end: 4;
